@@ -1,7 +1,7 @@
 FROM nginx:alpine
 
-COPY . /usr/share/nginx/html
+COPY . /usr/share/nginx/html/
 
-RUN apk add curl
+EXPOSE 80
 
-CMD ["nginx-debug", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]
